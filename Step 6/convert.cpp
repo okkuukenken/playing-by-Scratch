@@ -11,7 +11,7 @@ int main(){
     double length,sum=0;
     std::map<std::string,int>pitch2num={{"ド",60},{"レ",62},{"ミ",64},{"ファ",65},{"ファ#",66},{"ソ",67},{"ソ#",68},{"ラ",69},{"シ",71},{"高ド",72},{"休",0}};
     while(ifs>>pitch>>length){
-        sum+=length;
+        sum+=length*60/bpm;
         ofs_pitch<<pitch2num[pitch]<<std::endl;
         ofs_until_second<<sum<<std::endl;
     }
